@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {computeRecord,computeDataset,filterRows,toCsv,toJson,validateRecord} from './tracker.mjs';
+const base={quote_id:'Q-X',customer_alias:'Synthetic Co',sent_date:'2026-09-20',value_band:'1K_5K',next_follow_up_date:'2026-09-30',owner:'Avery',response_state:'NO_RESPONSE',quote_state:'OPEN'};
+const A='2026-09-30';
+assert.equal(computeRecord({...base,next_follow_up_date:'2026-09-29'},A).due_state,'OVERDUE');
+assert.equal(computeRecord(base,A).due_state,'DUE_TODAY');
+assert.equal(computeRecord({...base,next_follow_up_date:'2026-10-01'},A).due_state,'UPCOMING');
+for(const s of ['WON','LOST','WITHDRAWN']) assert.equal(computeRecord({...base,quote_state:s,next_follow_up_date:'2026-09-01'},A).due_state,'CLOSED');
+for(const patch of [{owner:''},{sent_date:'09/20/2026'},{response_state:'MAYBE'},{value_band:'HUGE'},{quote_state:'MYSTERY'}]) assert.equal(computeRecord({...base,...patch},A).due_state,'REVIEW');
+assert.ok(computeRecord({...base,owner:''},A).computed_reason.includes('owner'));
+const dup=computeDataset([base,{...base,customer_alias:'Other'}],A);assert.equal(dup[1].due_state,'REVIEW');assert.ok(dup[1].computed_reason.includes('Duplicate'));
+const rows=computeDataset([base,{...base,quote_id:'Q-Y',owner:'Jordan',next_follow_up_date:'2026-10-01'}],A);
+const filtered=filterRows(rows,{owner:'Avery'});assert.equal(filtered.length,1);
+const csv=toCsv(filtered), json=toJson(filtered);assert.ok(csv.includes('computed_reason'));assert.equal(JSON.parse(json).length,1);assert.ok(json.includes('as_of_date'));
+assert.equal(validateRecord(base).length,0);
+// deliberate mutation oracles
+const mutantBoundary=(d,a)=>d<=a?'OVERDUE':'UPCOMING'; assert.notEqual(mutantBoundary(A,A),computeRecord(base,A).due_state);
+const mutantClosed=()=> 'OVERDUE'; assert.notEqual(mutantClosed(),computeRecord({...base,quote_state:'WON',next_follow_up_date:'2026-09-01'},A).due_state);
+const mutantGuessOwner={...base,owner:''}; assert.equal(computeRecord(mutantGuessOwner,A).due_state,'REVIEW');
+const mutantExport=toCsv(rows.slice(0,1)); assert.notEqual(mutantExport,toCsv(rows));
+console.log(JSON.stringify({status:'PASS',core_cases:18,mutation_controls:4,as_of:A}));
