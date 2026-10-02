@@ -1,0 +1,8 @@
+[
+  {"quote_id":"Q-1001","customer_alias":"Cedar Workshop","sent_date":"2026-09-22","value_band":"5K_15K","next_follow_up_date":"2026-09-29","owner":"Avery","response_state":"NO_RESPONSE","quote_state":"OPEN","last_contact_date":"2026-09-22","notes":"Synthetic demo: design package"},
+  {"quote_id":"Q-1002","customer_alias":"Northline Studio","sent_date":"2026-09-25","value_band":"1K_5K","next_follow_up_date":"2026-09-30","owner":"Jordan","response_state":"ASKED_QUESTION","quote_state":"PENDING","last_contact_date":"2026-09-28","notes":"Synthetic demo: clarification requested"},
+  {"quote_id":"Q-1003","customer_alias":"Maple & Main","sent_date":"2026-09-26","value_band":"UNDER_1K","next_follow_up_date":"2026-10-02","owner":"Avery","response_state":"FOLLOW_UP_LATER","quote_state":"OPEN","last_contact_date":"2026-09-26","notes":"Synthetic demo: revisit Friday"},
+  {"quote_id":"Q-1004","customer_alias":"Bluebird Fabrication","sent_date":"2026-09-20","value_band":"15K_PLUS","next_follow_up_date":"2026-09-27","owner":"Morgan","response_state":"ACCEPTED","quote_state":"WON","last_contact_date":"2026-09-27","notes":"Synthetic demo: closed won"},
+  {"quote_id":"Q-1005","customer_alias":"Stonebridge Goods","sent_date":"2026-09-24","value_band":"1K_5K","next_follow_up_date":"2026-09-28","owner":"Morgan","response_state":"DECLINED","quote_state":"LOST","last_contact_date":"2026-09-28","notes":"Synthetic demo: closed lost"},
+  {"quote_id":"Q-1006","customer_alias":"Harbor Street Co.","sent_date":"2026-09-29","value_band":"5K_15K","next_follow_up_date":"2026-10-05","owner":"Jordan","response_state":"NO_RESPONSE","quote_state":"OPEN","notes":"Synthetic demo: recently sent"}
+]
