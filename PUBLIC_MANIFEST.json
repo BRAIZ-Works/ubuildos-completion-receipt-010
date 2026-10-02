@@ -1,0 +1,24 @@
+{
+  "schema": "UBUILDOS_DAY09_GITHUB_PUBLICATION_MANIFEST_V1",
+  "subject": "Day 09 Quote Follow-Up Tracker GitHub publication projection",
+  "source_frozen_subject": "UBUILDOS_DAY09_POST_READY_SUCCESSOR_v1.0.2.zip",
+  "source_frozen_subject_sha256": "dea8521756946c1140b5a979a26e68a14b3530f7e3ea7064df803ea5bb841a23",
+  "projection_rule": "All regular files in this GitHub publication projection except PUBLIC_MANIFEST.json and SHA256SUMS.txt are enumerated here. LinkedIn distribution artifacts are intentionally separate.",
+  "files": [
+    {"path": ".nojekyll","bytes": 0,"sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    {"path": "ACCESSIBILITY.md","bytes": 361,"sha256": "4b64bbb38aee4d062b728819459beedcda156b0b4775fb8815b4436a23b73703"},
+    {"path": "LIMITATIONS.md","bytes": 399,"sha256": "52198c7488b59fd3621638f351297b9c4a7b9d88f03d8e4a002b0d8a0d62ecf0"},
+    {"path": "METHODOLOGY.md","bytes": 626,"sha256": "4fdcacdbf303d3d1b4b9fb3fc74ba37441acb66b9d05e6c909bfe0648bf4337f"},
+    {"path": "PRIVACY.md","bytes": 281,"sha256": "82fdcf60d1fce7c2febb5cf2d9d3ae0e6c4187f43f29bbb9489d56c28dde5bc7"},
+    {"path": "README.md","bytes": 1473,"sha256": "4aae5888747268a2075306eba48804ae45daf44c8f86764dc9bc01fec4e89007"},
+    {"path": "SECURITY.md","bytes": 395,"sha256": "afa28620cb895421d614480af6ce64c55e4e3d24d13daed5d6ee8c9622bc94ec"},
+    {"path": "VERIFICATION_SUMMARY.md","bytes": 1023,"sha256": "6bb2ba7fd439416f906dacc3ac9993632fe30687e449b3bae9d3b1b917d49685"},
+    {"path": "app.mjs","bytes": 3338,"sha256": "2c8bc619db88ed00feeb17cd63cbe00a5cd489a3f55229c9e622cef9466d4077"},
+    {"path": "data/quotes.json","bytes": 1690,"sha256": "f13cf46c3b96c7cc83888be9d71057852e2b2a89ed3a9347b160ea4e21b545b2"},
+    {"path": "evidence/PRODUCT_TESTS.json","bytes": 77,"sha256": "bb9cb8385fde550673c96abe3d94c05675690f702269af5eb1a13470791c3d25"},
+    {"path": "index.html","bytes": 3158,"sha256": "320ac8ea1de6800f16c222bfea39304a920d77c98176b3a8c76cfd047db86e64"},
+    {"path": "styles.css","bytes": 3646,"sha256": "ced1f27b2078e006cd54766e123d5279ebc5b33e6ed19a792937a077b712f314"},
+    {"path": "tests.mjs","bytes": 2208,"sha256": "e4500dbe6dd64a10578d62b76f45793ec2633f94a962c291cfea161a9d87de65"},
+    {"path": "tracker.mjs","bytes": 4087,"sha256": "10bd8aaf4b6ae6860b5f74f2b977a9e14febbd5b9e7e3b0a94605da8f4ca3b50"}
+  ]
+}
